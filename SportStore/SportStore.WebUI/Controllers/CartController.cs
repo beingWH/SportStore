@@ -44,7 +44,7 @@ namespace SportStore.WebUI.Controllers
         public RedirectToRouteResult RemoveFromCart(int productId, string returnUrl)
         {
             Product product = repository.Products.FirstOrDefault(p => p.ProductID == productId);
-            if (product == null)
+            if (product ！= null)
             {GetCart().RemoveLine(product);} 
             return RedirectToAction("Index", new { returnUrl });
         }
