@@ -16,6 +16,7 @@ namespace SportStore.WebUI.Controllers
         public CartController(IProductRepository repo)
         {
             repository = repo;
+           
         }
         private Cart GetCart()
         {
@@ -46,8 +47,10 @@ namespace SportStore.WebUI.Controllers
             if (product != null)
             {
                 GetCart().RemoveLine(product);
+                GetCart().RemoveLine(product);
             }
             return RedirectToAction("Index", new { returnUrl });
         }
+        
     }
 }
