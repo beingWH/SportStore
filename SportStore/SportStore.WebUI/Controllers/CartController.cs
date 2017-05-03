@@ -47,11 +47,6 @@ namespace SportStore.WebUI.Controllers
             if (product != null)
             {
                 GetCart().RemoveLine(product);
-
-
-
-
-
             } 
             return RedirectToAction("Index", new { returnUrl });
         }
